@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		029E52ED1B17D2160062A263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E52EC1B17D2160062A263 /* AppDelegate.swift */; };
+		029E52EF1B17D2160062A263 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E52EE1B17D2160062A263 /* ViewController.swift */; };
+		029E52F21B17D2160062A263 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029E52F01B17D2160062A263 /* Main.storyboard */; };
+		029E52F41B17D2160062A263 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029E52F31B17D2160062A263 /* Images.xcassets */; };
+		029E52F71B17D2160062A263 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029E52F51B17D2160062A263 /* LaunchScreen.xib */; };
+		029E53031B17D2160062A263 /* GAP3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E53021B17D2160062A263 /* GAP3Tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		029E52FD1B17D2160062A263 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 029E52DF1B17D2160062A263 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 029E52E61B17D2160062A263;
+			remoteInfo = GAP3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		029E52E71B17D2160062A263 /* GAP3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAP3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		029E52EB1B17D2160062A263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		029E52EC1B17D2160062A263 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		029E52EE1B17D2160062A263 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		029E52F11B17D2160062A263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		029E52F31B17D2160062A263 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		029E52F61B17D2160062A263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		029E52FC1B17D2160062A263 /* GAP3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GAP3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		029E53011B17D2160062A263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		029E53021B17D2160062A263 /* GAP3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAP3Tests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		029E52E41B17D2160062A263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		029E52F91B17D2160062A263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		029E52DE1B17D2160062A263 = {
+			isa = PBXGroup;
+			children = (
+				029E52E91B17D2160062A263 /* GAP3 */,
+				029E52FF1B17D2160062A263 /* GAP3Tests */,
+				029E52E81B17D2160062A263 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		029E52E81B17D2160062A263 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				029E52E71B17D2160062A263 /* GAP3.app */,
+				029E52FC1B17D2160062A263 /* GAP3Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		029E52E91B17D2160062A263 /* GAP3 */ = {
+			isa = PBXGroup;
+			children = (
+				029E52EC1B17D2160062A263 /* AppDelegate.swift */,
+				029E52EE1B17D2160062A263 /* ViewController.swift */,
+				029E52F01B17D2160062A263 /* Main.storyboard */,
+				029E52F31B17D2160062A263 /* Images.xcassets */,
+				029E52F51B17D2160062A263 /* LaunchScreen.xib */,
+				029E52EA1B17D2160062A263 /* Supporting Files */,
+			);
+			path = GAP3;
+			sourceTree = "<group>";
+		};
+		029E52EA1B17D2160062A263 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				029E52EB1B17D2160062A263 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		029E52FF1B17D2160062A263 /* GAP3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				029E53021B17D2160062A263 /* GAP3Tests.swift */,
+				029E53001B17D2160062A263 /* Supporting Files */,
+			);
+			path = GAP3Tests;
+			sourceTree = "<group>";
+		};
+		029E53001B17D2160062A263 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				029E53011B17D2160062A263 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		029E52E61B17D2160062A263 /* GAP3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 029E53061B17D2160062A263 /* Build configuration list for PBXNativeTarget "GAP3" */;
+			buildPhases = (
+				029E52E31B17D2160062A263 /* Sources */,
+				029E52E41B17D2160062A263 /* Frameworks */,
+				029E52E51B17D2160062A263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GAP3;
+			productName = GAP3;
+			productReference = 029E52E71B17D2160062A263 /* GAP3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		029E52FB1B17D2160062A263 /* GAP3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 029E53091B17D2160062A263 /* Build configuration list for PBXNativeTarget "GAP3Tests" */;
+			buildPhases = (
+				029E52F81B17D2160062A263 /* Sources */,
+				029E52F91B17D2160062A263 /* Frameworks */,
+				029E52FA1B17D2160062A263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				029E52FE1B17D2160062A263 /* PBXTargetDependency */,
+			);
+			name = GAP3Tests;
+			productName = GAP3Tests;
+			productReference = 029E52FC1B17D2160062A263 /* GAP3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		029E52DF1B17D2160062A263 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Shane Hughes";
+				TargetAttributes = {
+					029E52E61B17D2160062A263 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					029E52FB1B17D2160062A263 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 029E52E61B17D2160062A263;
+					};
+				};
+			};
+			buildConfigurationList = 029E52E21B17D2160062A263 /* Build configuration list for PBXProject "GAP3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 029E52DE1B17D2160062A263;
+			productRefGroup = 029E52E81B17D2160062A263 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				029E52E61B17D2160062A263 /* GAP3 */,
+				029E52FB1B17D2160062A263 /* GAP3Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		029E52E51B17D2160062A263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				029E52F21B17D2160062A263 /* Main.storyboard in Resources */,
+				029E52F71B17D2160062A263 /* LaunchScreen.xib in Resources */,
+				029E52F41B17D2160062A263 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		029E52FA1B17D2160062A263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		029E52E31B17D2160062A263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				029E52EF1B17D2160062A263 /* ViewController.swift in Sources */,
+				029E52ED1B17D2160062A263 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		029E52F81B17D2160062A263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				029E53031B17D2160062A263 /* GAP3Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		029E52FE1B17D2160062A263 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 029E52E61B17D2160062A263 /* GAP3 */;
+			targetProxy = 029E52FD1B17D2160062A263 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		029E52F01B17D2160062A263 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				029E52F11B17D2160062A263 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		029E52F51B17D2160062A263 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				029E52F61B17D2160062A263 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		029E53041B17D2160062A263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		029E53051B17D2160062A263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		029E53071B17D2160062A263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GAP3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		029E53081B17D2160062A263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GAP3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		029E530A1B17D2160062A263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GAP3Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GAP3.app/GAP3";
+			};
+			name = Debug;
+		};
+		029E530B1B17D2160062A263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GAP3Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GAP3.app/GAP3";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		029E52E21B17D2160062A263 /* Build configuration list for PBXProject "GAP3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				029E53041B17D2160062A263 /* Debug */,
+				029E53051B17D2160062A263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		029E53061B17D2160062A263 /* Build configuration list for PBXNativeTarget "GAP3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				029E53071B17D2160062A263 /* Debug */,
+				029E53081B17D2160062A263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		029E53091B17D2160062A263 /* Build configuration list for PBXNativeTarget "GAP3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				029E530A1B17D2160062A263 /* Debug */,
+				029E530B1B17D2160062A263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 029E52DF1B17D2160062A263 /* Project object */;
+}
