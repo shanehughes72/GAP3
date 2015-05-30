@@ -85,6 +85,9 @@ class TableViewController: PFQueryTableViewController {
 		}
 	}
 	
+
+ 
+    
 	override func viewDidAppear(animated: Bool) {
 		
 		// Refresh the table to ensure any data changes are displayed

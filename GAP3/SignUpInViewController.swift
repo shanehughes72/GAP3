@@ -17,6 +17,19 @@ class SignUpInViewController: UIViewController {
 	@IBOutlet weak var message: UILabel!
 	@IBOutlet weak var emailAddress: UITextField!
 	@IBOutlet weak var password: UITextField!
+    
+    
+    
+    var popViewController : PopUpViewControllerSwift!
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
 	
 	@IBAction func signUp(sender: AnyObject) {
 		
@@ -63,7 +76,37 @@ class SignUpInViewController: UIViewController {
 			}
 		}
 	}
-	
+    @IBOutlet weak var showPopUpBtn: UIButton!
+    
+     //@IBOutlet weak var showPopupBtn: UIButton!
+    
+    @IBAction func showPopUp(sender: AnyObject) {
+        if (UIDevice.currentDevice().userInterfaceIdiom == .Pad)
+        {
+            self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController_iPad", bundle: nil)
+            self.popViewController.title = "This is a popup view"
+            self.popViewController.showInView(self.view, withImage: UIImage(named: "typpzDemo"), withMessage: "This is where setting icons will go", animated: true)
+        } else
+        {
+            if UIScreen.mainScreen().bounds.size.width > 320 {
+                if UIScreen.mainScreen().scale == 3 {
+                    self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController_iPhone6Plus", bundle: nil)
+                    self.popViewController.title = "This is a popup view"
+                    self.popViewController.showInView(self.view, withImage: UIImage(named: "typpzDemo"), withMessage: "This is where setting icons will go", animated: true)
+                } else {
+                    self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController_iPhone6", bundle: nil)
+                    self.popViewController.title = "This is a popup view"
+                    self.popViewController.showInView(self.view, withImage: UIImage(named: "typpzDemo"), withMessage: "This is where setting icons will go", animated: true)
+                }
+            } else {
+                self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController", bundle: nil)
+                self.popViewController.title = "This is a popup view"
+                self.popViewController.showInView(self.view, withImage: UIImage(named: "typpzDemo"), withMessage: "This is where setting icons will go", animated: true)
+            }
+        }
+    }
+
+ 
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0243186E1B1A2F520014A8C2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243186D1B1A2F520014A8C2 /* MenuViewController.swift */; };
+		024318701B1A2FA90014A8C2 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0243186F1B1A2FA90014A8C2 /* MenuTransitionManager.swift */; };
 		028484BE1B17EA6B009D1516 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028484BD1B17EA6B009D1516 /* AudioToolbox.framework */; };
 		02867FCF1B17E81300085453 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02867FCE1B17E81300085453 /* CFNetwork.framework */; };
 		02867FD11B17E81E00085453 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02867FD01B17E81E00085453 /* CoreGraphics.framework */; };
@@ -31,6 +33,11 @@
 		029E531C1B17E6860062A263 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029E53161B17E6860062A263 /* ParseFacebookUtils.framework */; };
 		029E531D1B17E6860062A263 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029E53171B17E6860062A263 /* ParseFacebookUtilsV4.framework */; };
 		029E531E1B17E6860062A263 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029E53181B17E6860062A263 /* ParseUI.framework */; };
+		02ADAEB11B18CEBE003A3D2D /* PopUpViewController_iPhone6Plus.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02ADAEAD1B18CEBE003A3D2D /* PopUpViewController_iPhone6Plus.xib */; };
+		02ADAEB21B18CEBE003A3D2D /* PopUpViewController_iPhone6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02ADAEAE1B18CEBE003A3D2D /* PopUpViewController_iPhone6.xib */; };
+		02ADAEB31B18CEBE003A3D2D /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02ADAEAF1B18CEBE003A3D2D /* PopUpViewController.xib */; };
+		02ADAEB41B18CEBE003A3D2D /* PopUpViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02ADAEB01B18CEBE003A3D2D /* PopUpViewController_iPad.xib */; };
+		02ADAEB61B18CF93003A3D2D /* PopUpViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ADAEB51B18CF93003A3D2D /* PopUpViewControllerSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0243186D1B1A2F520014A8C2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		0243186F1B1A2FA90014A8C2 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		0271FDA61B17F43E00018EE6 /* GAP3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GAP3-Bridging-Header.h"; sourceTree = "<group>"; };
 		028484BD1B17EA6B009D1516 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		02867FCC1B17E80D00085453 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
@@ -74,6 +83,11 @@
 		029E53161B17E6860062A263 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		029E53171B17E6860062A263 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		029E53181B17E6860062A263 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		02ADAEAD1B18CEBE003A3D2D /* PopUpViewController_iPhone6Plus.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController_iPhone6Plus.xib; sourceTree = "<group>"; };
+		02ADAEAE1B18CEBE003A3D2D /* PopUpViewController_iPhone6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController_iPhone6.xib; sourceTree = "<group>"; };
+		02ADAEAF1B18CEBE003A3D2D /* PopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
+		02ADAEB01B18CEBE003A3D2D /* PopUpViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController_iPad.xib; sourceTree = "<group>"; };
+		02ADAEB51B18CF93003A3D2D /* PopUpViewControllerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewControllerSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +165,15 @@
 		029E52E91B17D2160062A263 /* GAP3 */ = {
 			isa = PBXGroup;
 			children = (
+				02ADAEAD1B18CEBE003A3D2D /* PopUpViewController_iPhone6Plus.xib */,
+				02ADAEAE1B18CEBE003A3D2D /* PopUpViewController_iPhone6.xib */,
+				02ADAEAF1B18CEBE003A3D2D /* PopUpViewController.xib */,
+				02ADAEB01B18CEBE003A3D2D /* PopUpViewController_iPad.xib */,
 				029E530C1B17E5340062A263 /* DetailViewController.swift */,
 				029E530D1B17E5340062A263 /* TableViewController.swift */,
+				02ADAEB51B18CF93003A3D2D /* PopUpViewControllerSwift.swift */,
+				0243186D1B1A2F520014A8C2 /* MenuViewController.swift */,
+				0243186F1B1A2FA90014A8C2 /* MenuTransitionManager.swift */,
 				029E530E1B17E5340062A263 /* SignUpInViewController.swift */,
 				029E52F01B17D2160062A263 /* Main.storyboard */,
 				029E52EA1B17D2160062A263 /* Supporting Files */,
@@ -282,9 +303,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02ADAEB41B18CEBE003A3D2D /* PopUpViewController_iPad.xib in Resources */,
 				029E52F21B17D2160062A263 /* Main.storyboard in Resources */,
+				02ADAEB21B18CEBE003A3D2D /* PopUpViewController_iPhone6.xib in Resources */,
 				029E52F71B17D2160062A263 /* LaunchScreen.xib in Resources */,
 				029E52F41B17D2160062A263 /* Images.xcassets in Resources */,
+				02ADAEB11B18CEBE003A3D2D /* PopUpViewController_iPhone6Plus.xib in Resources */,
+				02ADAEB31B18CEBE003A3D2D /* PopUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,8 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				029E52ED1B17D2160062A263 /* AppDelegate.swift in Sources */,
+				0243186E1B1A2F520014A8C2 /* MenuViewController.swift in Sources */,
 				029E53101B17E5340062A263 /* TableViewController.swift in Sources */,
+				02ADAEB61B18CF93003A3D2D /* PopUpViewControllerSwift.swift in Sources */,
 				029E530F1B17E5340062A263 /* DetailViewController.swift in Sources */,
+				024318701B1A2FA90014A8C2 /* MenuTransitionManager.swift in Sources */,
 				029E53111B17E5340062A263 /* SignUpInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
