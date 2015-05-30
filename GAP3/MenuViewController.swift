@@ -34,6 +34,14 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var audioPostIcon: UIImageView!
     @IBOutlet weak var audioPostLabel: UILabel!
     
+    
+
+    @IBAction func unwindToMainViewController(sender: UIButton) {
+        // bug? exit segue doesn't dismiss so we do it manually...
+        self.dismissViewControllerAnimated(true, completion: nil)
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

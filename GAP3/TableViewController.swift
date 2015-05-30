@@ -72,21 +72,47 @@ class TableViewController: PFQueryTableViewController {
 		return cell
 	}
 	
+    
 	// In a storyboard-based application, you will often want to do a little preparation before navigation
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
 		
 		// Get the new view controller using [segue destinationViewController].
-		var detailScene = segue.destinationViewController as! DetailViewController
+        if let detailScene = segue.destinationViewController as? DetailViewController {
 		
-		// Pass the selected object to the destination view controller.
-		if let indexPath = self.tableView.indexPathForSelectedRow() {
-			let row = Int(indexPath.row)
-			detailScene.currentObject = (objects?[row] as? PFObject)
-		}
+            // Pass the selected object to the destination view controller.
+            if let indexPath = self.tableView.indexPathForSelectedRow() {
+                let row = Int(indexPath.row)
+                detailScene.currentObject = (objects?[row] as? PFObject)
+            }
+        }
 	}
 	
+    /*
+    
+    func newLabelWithTitle(title: String) -> UILabel {
+        let label = UILabel()
+        label.text = title
+        label.backgroundColor = UIColor.clearColor()
+        label.sizeToFit()
+        return label
+    }
+    
+    override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 40))
+        footerView.backgroundColor = UIColor.blackColor()
+        
+        return footerView
+    }
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 40.0
+    }
 
- 
+    */
+    
+    
     
 	override func viewDidAppear(animated: Bool) {
 		

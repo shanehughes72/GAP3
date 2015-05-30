@@ -108,8 +108,27 @@ class SignUpInViewController: UIViewController {
 
  
 	
+    
+    /*
+    occurs when you try and display a new viewcontroller before the current view controller is finished displaying. You can reproduce it by navigating in viewWillAppear.
+    
+    Basically you are trying to push two view controllers onto the stack at almost the same time. Suggest you maintain a queue in the tableview controller which maintains a list of the detail views which need displaying. Push one at a time on to the stack and check on exit from the current detail view whether there are any queued detail views which need displaying.
+    
+    This kind of navigation is going to be confusing for the user. It may be better to consider making your detail view support multiple items.
+    */
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        
+        if PFUser.currentUser() != nil{
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.performSegueWithIdentifier("signInToNavigation", sender: self)
+            }
+            println("there is a user logged in")
+            
+            
+        }
 		
 		activityIndicator.hidden = true
 		activityIndicator.hidesWhenStopped = true
