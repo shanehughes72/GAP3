@@ -383,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQ7-fE-3gM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-498" y="439"/>
+            <point key="canvasLocation" x="-556" y="-125"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="59b-ec-B5I">
@@ -425,6 +425,7 @@
         <!--Navigation Controller-->
         <scene sceneID="DUF-Ko-iPu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mrY-lu-qRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="UINavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Prx-uo-xuW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -438,9 +439,39 @@
                         <segue destination="aI5-Cp-LdH" kind="relationship" relationship="rootViewController" id="kW9-fZ-AZs"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mrY-lu-qRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="227" y="439"/>
+            <point key="canvasLocation" x="-549" y="705"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FKP-h6-2fd">
+            <objects>
+                <viewController id="KPS-hV-eFu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Kl-98-1jt"/>
+                        <viewControllerLayoutGuide type="bottom" id="F4m-gr-0HS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pqH-cp-f6l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3a-Rb-NxN">
+                                <rect key="frame" x="238" y="99" width="121" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Prayer Closet"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbv-hi-rM4">
+                                <rect key="frame" x="238" y="209" width="121" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Prayer Wall"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iz-et-Ryg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="269" y="1114"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="JUA-uC-nhc">
