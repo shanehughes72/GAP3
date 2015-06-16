@@ -57,11 +57,11 @@ class SignUpInViewController: UIViewController {
 		activityIndicator.startAnimating()
 		
 		var userEmailAddress = emailAddress.text
-		userEmailAddress = userEmailAddress.lowercaseString
+		userEmailAddress = userEmailAddress!.lowercaseString
 		
-		var userPassword = password.text
+		let userPassword = password.text
 		
-		PFUser.logInWithUsernameInBackground(userEmailAddress, password:userPassword) {
+		PFUser.logInWithUsernameInBackground(userEmailAddress!, password:userPassword!) {
 			(user: PFUser?, error: NSError?) -> Void in
 			if user != nil {
 				dispatch_async(dispatch_get_main_queue()) {
@@ -70,7 +70,7 @@ class SignUpInViewController: UIViewController {
 			} else {
 				self.activityIndicator.stopAnimating()
 				
-				if let message: AnyObject = error!.userInfo!["error"] {
+				if let message: AnyObject = error!.userInfo["error"] {
 					self.message.text = "\(message)"
 				}
 			}
@@ -142,10 +142,10 @@ class SignUpInViewController: UIViewController {
 	func processSignUp() {
 		
 		var userEmailAddress = emailAddress.text
-		var userPassword = password.text
+		let userPassword = password.text
 		
 		// Ensure username is lowercase
-		userEmailAddress = userEmailAddress.lowercaseString
+		userEmailAddress = userEmailAddress!.lowercaseString
 		
 		// Add email address validation
 		
@@ -154,7 +154,7 @@ class SignUpInViewController: UIViewController {
 		activityIndicator.startAnimating()
 		
 		// Create the user
-		var user = PFUser()
+		let user = PFUser()
 		user.username = userEmailAddress
 		user.password = userPassword
 		user.email = userEmailAddress
@@ -171,7 +171,7 @@ class SignUpInViewController: UIViewController {
 				
 				self.activityIndicator.stopAnimating()
 			 
-				if let message: AnyObject = error!.userInfo!["error"] {
+				if let message: AnyObject = error!.userInfo["error"] {
 					self.message.text = "\(message)"
 				}				
 			}

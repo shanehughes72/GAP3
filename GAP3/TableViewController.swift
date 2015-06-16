@@ -20,7 +20,7 @@ class TableViewController: PFQueryTableViewController {
 		PFUser.logOut()
 		
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as! UIViewController
+		let vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as UIViewController
 		self.presentViewController(vc, animated: true, completion: nil)
 	}
 	
@@ -48,7 +48,7 @@ class TableViewController: PFQueryTableViewController {
 	
 	// Define the query that will provide the data for the table view
 	override func queryForTable() -> PFQuery {
-		var query = PFQuery(className: "PrayerTable")
+		let query = PFQuery(className: "PrayerTable")
 		query.orderByAscending("firstName")
 		return query
 	}
@@ -82,7 +82,7 @@ class TableViewController: PFQueryTableViewController {
         if let detailScene = segue.destinationViewController as? DetailViewController {
 		
             // Pass the selected object to the destination view controller.
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
                 let row = Int(indexPath.row)
                 detailScene.currentObject = (objects?[row] as? PFObject)
             }

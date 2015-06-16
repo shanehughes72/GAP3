@@ -41,7 +41,7 @@ class DetailViewController: UIViewController {
 		} else {
 			
 			// Create a new parse object
-			var updateObject = PFObject(className:"PrayerTable")
+			let updateObject = PFObject(className:"PrayerTable")
 			
 			updateObject["firstName"] = firstName.text
 			updateObject["lastName"] = lastName.text

@@ -10,6 +10,13 @@ import UIKit
 
 class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate  {
     
+    
+    
+    
+    
+    
+    
+    
     private var presenting = false
     
     // MARK: UIViewControllerAnimatedTransitioning protocol methods
@@ -37,21 +44,26 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
         }
         
         // add the both views to our view controller
-        container.addSubview(bottomView)
-        container.addSubview(menuView)
+        container!.addSubview(bottomView)
+        container!.addSubview(menuView)
         
         let duration = self.transitionDuration(transitionContext)
         
+            // set a transition style
+        //let transitionOptions = UIViewAnimationOptions.TransitionNone
+        
         // perform the animation!
-        UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: nil, animations: {
+        
+        
+        UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: [], animations: {
             
-                if (self.presenting){
-                    self.onStageMenuController(menuViewController) // onstage items: slide in
-                }
-                else {
-                    self.offStageMenuController(menuViewController) // offstage items: slide out
-                }
-
+            if (self.presenting){
+                self.onStageMenuController(menuViewController) // onstage items: slide in
+            }
+            else {
+                self.offStageMenuController(menuViewController) // offstage items: slide out
+            }
+            
             }, completion: { finished in
                 
                 // tell our transitionContext object that we've finished animating
@@ -63,6 +75,33 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
         })
         
     }
+    
+    /*
+        
+        UIView.animateWithDuration(1.0,  delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: [], animations: {
+            
+            if (self.presenting){
+                self.onStageMenuController(menuViewController) // onstage items: slide in
+            }
+            else {
+                self.offStageMenuController(menuViewController) // offstage items: slide out
+            }
+            
+            }, completion: { (finished: Bool) in
+                
+                // tell our transitionContext object that we've finished animating
+                transitionContext.completeTransition(true)
+                
+                // bug: we have to manually add our 'to view' back http://openradar.appspot.com/radar?id=5320103646199808
+                UIApplication.sharedApplication().keyWindow!.addSubview(screens.to.view)
+                
+                
+        })
+        
+    }
+    
+    */
+
     
     func offStageMenuController(menuViewController: MenuViewController){
         
@@ -120,7 +159,7 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
     }
     
     // return how many seconds the transiton animation will take
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 0.5
     }
     

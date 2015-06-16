@@ -35,22 +35,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             isLoggedIn = true
             
-            println(isLoggedIn)
+            print(isLoggedIn)
         }// server response
         
         //var storyboardId = ""
         
         
-        var storyboardId = isLoggedIn ? "UINavigationController" : "SignUpInViewController"
+        let storyboardId = isLoggedIn ? "UINavigationController" : "SignUpInViewController"
         
-        println("storyboardId is  \(storyboardId)")
+        print("storyboardId is  \(storyboardId)", appendNewline: false)
         
         
         
         
         
         // .instantiatViewControllerWithIdentifier() returns AnyObject! this must be downcast to utilize it
-        let initViewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("\(storyboardId)") as! UIViewController
+        let initViewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("\(storyboardId)") as UIViewController
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.rootViewController = initViewController
         self.window!.makeKeyAndVisible()
