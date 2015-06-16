@@ -14,15 +14,7 @@ import ParseUI
 
 class TableViewController: PFQueryTableViewController {
 
-	// Sign the user out
-	@IBAction func signOut(sender: AnyObject) {
-		
-		PFUser.logOut()
-		
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as UIViewController
-		self.presentViewController(vc, animated: true, completion: nil)
-	}
+
 	
 	@IBAction func add(sender: AnyObject) {
 		

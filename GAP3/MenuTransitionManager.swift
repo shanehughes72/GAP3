@@ -11,10 +11,7 @@ import UIKit
 class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate  {
     
     
-    
-    
-    
-    
+
     
     
     private var presenting = false

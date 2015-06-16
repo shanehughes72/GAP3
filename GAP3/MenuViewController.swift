@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class MenuViewController: UIViewController {
     
@@ -17,6 +18,19 @@ class MenuViewController: UIViewController {
     // so that we can animate their properties
     
 
+    // Sign the user out
+    @IBAction func signOut(sender: AnyObject) {
+        
+        PFUser.logOut()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
+        
+        print("button pressed", appendNewline: true)
+    }
+    
+    
     
     
     @IBOutlet weak var textPostIcon: UIImageView!

@@ -34,9 +34,6 @@
 		029E531D1B17E6860062A263 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029E53171B17E6860062A263 /* ParseFacebookUtilsV4.framework */; };
 		029E531E1B17E6860062A263 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029E53181B17E6860062A263 /* ParseUI.framework */; };
 		02ADAEB11B18CEBE003A3D2D /* PopUpViewController_iPhone6Plus.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02ADAEAD1B18CEBE003A3D2D /* PopUpViewController_iPhone6Plus.xib */; };
-		02ADAEB21B18CEBE003A3D2D /* PopUpViewController_iPhone6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02ADAEAE1B18CEBE003A3D2D /* PopUpViewController_iPhone6.xib */; };
-		02ADAEB31B18CEBE003A3D2D /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02ADAEAF1B18CEBE003A3D2D /* PopUpViewController.xib */; };
-		02ADAEB41B18CEBE003A3D2D /* PopUpViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02ADAEB01B18CEBE003A3D2D /* PopUpViewController_iPad.xib */; };
 		02ADAEB61B18CF93003A3D2D /* PopUpViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ADAEB51B18CF93003A3D2D /* PopUpViewControllerSwift.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,10 +80,7 @@
 		029E53161B17E6860062A263 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		029E53171B17E6860062A263 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		029E53181B17E6860062A263 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
-		02ADAEAD1B18CEBE003A3D2D /* PopUpViewController_iPhone6Plus.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController_iPhone6Plus.xib; sourceTree = "<group>"; };
-		02ADAEAE1B18CEBE003A3D2D /* PopUpViewController_iPhone6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController_iPhone6.xib; sourceTree = "<group>"; };
-		02ADAEAF1B18CEBE003A3D2D /* PopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
-		02ADAEB01B18CEBE003A3D2D /* PopUpViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController_iPad.xib; sourceTree = "<group>"; };
+		02ADAEAD1B18CEBE003A3D2D /* PopUpViewController_iPhone6Plus.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopUpViewController_iPhone6Plus.xib; path = GAP3/PopUpViewController_iPhone6Plus.xib; sourceTree = "<group>"; };
 		02ADAEB51B18CF93003A3D2D /* PopUpViewControllerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewControllerSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +144,7 @@
 				029E52E91B17D2160062A263 /* GAP3 */,
 				029E52FF1B17D2160062A263 /* GAP3Tests */,
 				029E52E81B17D2160062A263 /* Products */,
+				02ADAEAD1B18CEBE003A3D2D /* PopUpViewController_iPhone6Plus.xib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,10 +160,6 @@
 		029E52E91B17D2160062A263 /* GAP3 */ = {
 			isa = PBXGroup;
 			children = (
-				02ADAEAD1B18CEBE003A3D2D /* PopUpViewController_iPhone6Plus.xib */,
-				02ADAEAE1B18CEBE003A3D2D /* PopUpViewController_iPhone6.xib */,
-				02ADAEAF1B18CEBE003A3D2D /* PopUpViewController.xib */,
-				02ADAEB01B18CEBE003A3D2D /* PopUpViewController_iPad.xib */,
 				029E530C1B17E5340062A263 /* DetailViewController.swift */,
 				029E530D1B17E5340062A263 /* TableViewController.swift */,
 				02ADAEB51B18CF93003A3D2D /* PopUpViewControllerSwift.swift */,
@@ -304,13 +295,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02ADAEB41B18CEBE003A3D2D /* PopUpViewController_iPad.xib in Resources */,
 				029E52F21B17D2160062A263 /* Main.storyboard in Resources */,
-				02ADAEB21B18CEBE003A3D2D /* PopUpViewController_iPhone6.xib in Resources */,
 				029E52F71B17D2160062A263 /* LaunchScreen.xib in Resources */,
 				029E52F41B17D2160062A263 /* Images.xcassets in Resources */,
 				02ADAEB11B18CEBE003A3D2D /* PopUpViewController_iPhone6Plus.xib in Resources */,
-				02ADAEB31B18CEBE003A3D2D /* PopUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
