@@ -10,7 +10,6 @@
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
-            <string>HelveticaNeue-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -95,18 +94,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z4f-MZ-YFQ">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <animations/>
-                                <items>
-                                    <barButtonItem title="Save" id="MVD-bv-bk1">
-                                        <connections>
-                                            <action selector="saveButton:" destination="6i1-Ww-9cD" id="lGA-Ef-gar"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AM3-cF-jYV">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AM3-cF-jYV">
                                 <rect key="frame" x="7" y="75" width="592" height="49"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYY-il-DZJ">
@@ -141,57 +129,7 @@
                                     <constraint firstItem="jPK-tu-2B2" firstAttribute="top" secondItem="AM3-cF-jYV" secondAttribute="topMargin" id="kNK-RX-EGI"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPX-v1-v9K">
-                                <rect key="frame" x="7" y="171" width="592" height="49"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayer Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAA-6c-OR5">
-                                        <rect key="frame" x="8" y="8" width="77" height="17"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prayer Title" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZT7-i8-IXR">
-                                        <rect key="frame" x="489" y="8" width="95" height="30"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ZT7-i8-IXR" secondAttribute="bottom" constant="11" id="Wi5-J1-0JY"/>
-                                    <constraint firstItem="ZT7-i8-IXR" firstAttribute="trailing" secondItem="RPX-v1-v9K" secondAttribute="trailingMargin" id="bfo-CM-ZTO"/>
-                                    <constraint firstItem="tAA-6c-OR5" firstAttribute="leading" secondItem="RPX-v1-v9K" secondAttribute="leadingMargin" id="cfA-Fv-wVK"/>
-                                    <constraint firstItem="tAA-6c-OR5" firstAttribute="top" secondItem="ZT7-i8-IXR" secondAttribute="top" id="e6K-82-p8l"/>
-                                    <constraint firstItem="ZT7-i8-IXR" firstAttribute="top" secondItem="RPX-v1-v9K" secondAttribute="topMargin" id="oKh-4I-oaV"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y2q-wU-PXd">
-                                <rect key="frame" x="7" y="219" width="592" height="49"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhg-yh-AiN">
-                                        <rect key="frame" x="8" y="8" width="44" height="17"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="nhg-yh-AiN" firstAttribute="top" secondItem="Y2q-wU-PXd" secondAttribute="topMargin" id="EgF-vl-41p"/>
-                                    <constraint firstItem="nhg-yh-AiN" firstAttribute="leading" secondItem="Y2q-wU-PXd" secondAttribute="leadingMargin" id="PW9-GO-CDO"/>
-                                </constraints>
-                            </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="What would you like to pray about" translatesAutoresizingMaskIntoConstraints="NO" id="eda-Yx-KDo">
-                                <rect key="frame" x="20" y="276" width="560" height="285"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JkS-s3-D1z">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JkS-s3-D1z">
                                 <rect key="frame" x="7" y="123" width="592" height="49"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZE-8F-vCu">
@@ -220,42 +158,71 @@
                                     <constraint firstItem="0ZE-8F-vCu" firstAttribute="leading" secondItem="JkS-s3-D1z" secondAttribute="leadingMargin" id="s6e-1i-idK"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPX-v1-v9K">
+                                <rect key="frame" x="7" y="171" width="592" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayer Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAA-6c-OR5">
+                                        <rect key="frame" x="8" y="8" width="77" height="17"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prayer Title" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZT7-i8-IXR">
+                                        <rect key="frame" x="489" y="8" width="95" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ZT7-i8-IXR" secondAttribute="bottom" constant="11" id="Wi5-J1-0JY"/>
+                                    <constraint firstItem="ZT7-i8-IXR" firstAttribute="trailing" secondItem="RPX-v1-v9K" secondAttribute="trailingMargin" id="bfo-CM-ZTO"/>
+                                    <constraint firstItem="tAA-6c-OR5" firstAttribute="leading" secondItem="RPX-v1-v9K" secondAttribute="leadingMargin" id="cfA-Fv-wVK"/>
+                                    <constraint firstItem="tAA-6c-OR5" firstAttribute="top" secondItem="ZT7-i8-IXR" secondAttribute="top" id="e6K-82-p8l"/>
+                                    <constraint firstItem="ZT7-i8-IXR" firstAttribute="top" secondItem="RPX-v1-v9K" secondAttribute="topMargin" id="oKh-4I-oaV"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OM2-fN-UZb">
+                                <rect key="frame" x="20" y="228" width="560" height="328"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JkS-s3-D1z" firstAttribute="trailing" secondItem="AM3-cF-jYV" secondAttribute="trailing" id="1Qg-S3-W2G"/>
-                            <constraint firstItem="Y2q-wU-PXd" firstAttribute="top" secondItem="JkS-s3-D1z" secondAttribute="bottom" constant="47" id="62T-Z0-x5W"/>
-                            <constraint firstItem="Y2q-wU-PXd" firstAttribute="leading" secondItem="RPX-v1-v9K" secondAttribute="leading" id="6Zj-de-cBR"/>
+                            <constraint firstItem="OM2-fN-UZb" firstAttribute="top" secondItem="RPX-v1-v9K" secondAttribute="bottom" constant="8" id="6A2-Cx-26b"/>
                             <constraint firstItem="AM3-cF-jYV" firstAttribute="top" secondItem="aH8-ie-Nie" secondAttribute="bottom" constant="11" id="7J8-RU-1VC"/>
-                            <constraint firstItem="eda-Yx-KDo" firstAttribute="top" secondItem="RPX-v1-v9K" secondAttribute="bottom" constant="56" id="DOV-RD-5xH"/>
-                            <constraint firstItem="eda-Yx-KDo" firstAttribute="centerX" secondItem="Z4f-MZ-YFQ" secondAttribute="centerX" id="IlF-mL-VUZ"/>
                             <constraint firstItem="RPX-v1-v9K" firstAttribute="top" secondItem="AM3-cF-jYV" secondAttribute="bottom" constant="47" id="KNB-Fa-Nt8"/>
                             <constraint firstItem="AM3-cF-jYV" firstAttribute="leading" secondItem="nD5-50-xWA" secondAttribute="leadingMargin" constant="-13" id="L4w-ss-gWr"/>
-                            <constraint firstAttribute="trailing" secondItem="Z4f-MZ-YFQ" secondAttribute="trailing" id="MRE-jK-r03"/>
-                            <constraint firstItem="eda-Yx-KDo" firstAttribute="top" secondItem="Y2q-wU-PXd" secondAttribute="bottom" constant="8" symbolic="YES" id="O9C-jU-q3Z"/>
-                            <constraint firstItem="Z4f-MZ-YFQ" firstAttribute="top" secondItem="K3W-LI-woU" secondAttribute="top" id="RoQ-Zv-Iif"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OM2-fN-UZb" secondAttribute="trailing" id="RKP-iV-j6z"/>
                             <constraint firstItem="JkS-s3-D1z" firstAttribute="top" secondItem="aH8-ie-Nie" secondAttribute="bottom" constant="59" id="aTx-mS-Qt3"/>
-                            <constraint firstItem="eda-Yx-KDo" firstAttribute="leading" secondItem="nD5-50-xWA" secondAttribute="leadingMargin" id="cdd-u2-z1O"/>
-                            <constraint firstItem="Z4f-MZ-YFQ" firstAttribute="leading" secondItem="nD5-50-xWA" secondAttribute="leading" id="f8c-7v-Msb"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="eda-Yx-KDo" secondAttribute="bottom" constant="39" id="fpq-b1-UvS"/>
-                            <constraint firstItem="RPX-v1-v9K" firstAttribute="trailing" secondItem="Y2q-wU-PXd" secondAttribute="trailing" id="jXX-qx-uLO"/>
+                            <constraint firstItem="K3W-LI-woU" firstAttribute="top" secondItem="OM2-fN-UZb" secondAttribute="bottom" id="cjT-fP-pBD"/>
                             <constraint firstItem="RPX-v1-v9K" firstAttribute="leading" secondItem="JkS-s3-D1z" secondAttribute="leading" id="miQ-dB-vs9"/>
                             <constraint firstItem="AM3-cF-jYV" firstAttribute="leading" secondItem="JkS-s3-D1z" secondAttribute="leading" id="pq1-h7-CV9"/>
                             <constraint firstItem="RPX-v1-v9K" firstAttribute="trailing" secondItem="JkS-s3-D1z" secondAttribute="trailing" id="u95-hT-pVP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="OM2-fN-UZb" secondAttribute="leading" id="wHJ-Rc-prS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AM3-cF-jYV" secondAttribute="trailing" constant="-19" id="ycS-9d-ryg"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="save" id="mrc-Oe-3hW"/>
+                    </toolbarItems>
                     <connections>
                         <outlet property="firstName" destination="aYY-il-DZJ" id="G3K-IA-fNQ"/>
                         <outlet property="lastName" destination="YMC-oG-YVB" id="n5t-aD-WwS"/>
-                        <outlet property="prayer" destination="eda-Yx-KDo" id="wkB-Th-mMd"/>
                         <outlet property="prayerTitle" destination="ZT7-i8-IXR" id="8W4-5w-HCM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPZ-qv-kXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2596" y="439"/>
+            <point key="canvasLocation" x="2543" y="464"/>
         </scene>
         <!--Sign Up In View Controller-->
         <scene sceneID="gWL-9P-r5T">
@@ -632,7 +599,7 @@
         <!--UINavigationController-->
         <scene sceneID="ms4-ka-LAa">
             <objects>
-                <navigationController storyboardIdentifier="UINavigationController" title="UINavigationController" automaticallyAdjustsScrollViewInsets="NO" id="B4W-Hf-pKu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UINavigationController" title="UINavigationController" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" hidesBarsOnSwipe="YES" hidesBarsWhenKeyboardAppears="YES" id="B4W-Hf-pKu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4g8-Y4-u4g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -640,6 +607,11 @@
                         <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="WiS-c7-ECc">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </toolbar>
                     <connections>
                         <segue destination="KPS-hV-eFu" kind="relationship" relationship="rootViewController" id="kE1-RS-MHK"/>
                     </connections>
