@@ -108,7 +108,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         self.mapView.setRegion(MKCoordinateRegionMake(userLocation.coordinate, MKCoordinateSpanMake(0.1 , 0.1)), animated: true )
     }
-    
+    // 
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         var view = mapView.dequeueReusableAnnotationViewWithIdentifier(Constants.AnnotationViewReuseIdentifier)
         
