@@ -16,13 +16,12 @@ class DetailViewController: UIViewController {
 	// Container to store the view table selected object
 	var currentObject : PFObject?
 	
+    
 	// Some text fields
 	@IBOutlet weak var firstName: UITextField!
 	@IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var prayerTitle: UITextField!
     @IBOutlet weak var prayer: UITextView!
-
-	
 	
 	// The save button
 	@IBAction func saveButton(sender: AnyObject) {
@@ -34,7 +33,8 @@ class DetailViewController: UIViewController {
 			updateObject["lastName"] = lastName.text
 			updateObject["prayerTitle"] = prayerTitle.text
 			updateObject["prayer"] = prayer.text
-			
+            
+            
 			// Save the data back to the server in a background task
 			updateObject.saveEventually()
 			
@@ -64,6 +64,7 @@ class DetailViewController: UIViewController {
 		// Unwrap the current object object
         //#### - Not unwrapping here.
         if let object = currentObject {
+            //print("currentObject is = \(currentObject)")
 			firstName.text = object["firstName"] as? String
 			lastName.text = object["lastName"] as? String
 			prayerTitle.text = object["prayerTitle"] as? String

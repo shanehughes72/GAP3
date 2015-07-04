@@ -43,5 +43,44 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeIconFiles</key>
+			<array/>
+			<key>CFBundleTypeName</key>
+			<string>GPX File</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>edu.stanford.cs193p.gpx</string>
+			</array>
+		</dict>
+	</array>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.xml</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>GPX File</string>
+			<key>UTTypeIdentifier</key>
+			<string>edu.stanford.cs193p.gpx</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>gpx</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+    <key>NSLocationUsageDescription</key>
+    <string>My App would pretty please like to use your GPS.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>I wanna use the GPS 2</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>I wanna use the GPS</string>
 </dict>
 </plist>
