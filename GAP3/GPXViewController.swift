@@ -17,6 +17,8 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
 {
     
     let manager = CLLocationManager()
+    var alreadyUpdatedLocation = Bool()
+    var point = PFGeoPoint()
     // MARK: - Outlets
 
     @IBOutlet weak var mapView: MKMapView! {
@@ -63,24 +65,16 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     {
         if sender.state == UIGestureRecognizerState.Began {
             
-//            let manager = CLLocationManager()
-//            manager.delegate = self
-//            
-//            
-//            manager.desiredAccuracy = kCLLocationAccuracyBest
-//            if CLLocationManager.authorizationStatus() == .NotDetermined {
-//                print("hey")
-//                manager.requestWhenInUseAuthorization()
-//            }
-
             
-    
+            // will make these if lets and optional chaining later
+            // make helper function to deal with coord, lat and long plus point to use with
             
             let coordinate = mapView.convertPoint(sender.locationInView(mapView), toCoordinateFromView: mapView)
             let latitude = coordinate.latitude as Double
             let longitude = coordinate.longitude as Double
-            let point = PFGeoPoint(latitude:latitude, longitude:longitude)
+            point = PFGeoPoint(latitude:latitude, longitude:longitude)
             let pointer = PFObject(withoutDataWithClassName:"_User", objectId: "\(Constants.ObjectId)")
+            //let geoPointer = PFObject(withoutDataWithClassName: <#T##String#>, objectId: <#T##String?#>)
             let placeObject = PFObject(className:"GeoPoints")
             
             //print("latitude is \(latitude)")
@@ -91,24 +85,62 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
             //print("PFUser ID is \(PFUser.currentUser()!.objectId) ")
             //print("PFGeoPoint is \(point)"
             
+            // User's location
+            //let userGeoPoint = userObject["location"] as PFGeoPoint
+            
+            
+            
+            
             placeObject["user"] = pointer // shows up as Pointer <MyClassName> in the Data Browser
             placeObject["location"] = point
             
             placeObject.saveEventually()
             
             
+            // get it off the main thread when you move it out of this function to a helper function
+            // Create a query for places
+            let query = PFQuery(className:"GeoPoints")
+            // Interested in locations near user.
+            query.whereKey("location", nearGeoPoint:point)
+            // Limit what could be a lot of points.
+            query.limit = 10
+            // Final list of objects
+            let placesObjects = query.findObjects()
+            print("placesObjects is \( placesObjects)")
+            
+            
+            //Start with a simple for loop and print the values for each point, 
+            //then create the annotation in the loop and set the values,
+            //add the annotations to the map (best to create an array or annotations,
+            //but one step at a time) –
+            
+            
+
+            // do some error checking and get this out of this function into a model
+            //if let GeoPoints =
+            for GeoPoints in placesObjects! {
+               //print(GeoPoints.objectId)
+                let point = GeoPoints["location"] as! PFGeoPoint
+                print(point)
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = CLLocationCoordinate2DMake(point.latitude, point.longitude)
+                self.mapView.addAnnotation(annotation)
+            }
+            
+            
             let waypoint = EditableWaypoint(latitude: coordinate.latitude, longitude: coordinate.longitude)
             waypoint.name = "Dropped"
             mapView.addAnnotation(waypoint)
-        }
+            mapView.userTrackingMode = .None
+            manager.stopUpdatingLocation()        }
     }
     
     // MARK: - MKMapViewDelegate
     
-    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        self.mapView.setRegion(MKCoordinateRegionMake(userLocation.coordinate, MKCoordinateSpanMake(0.1 , 0.1)), animated: true )
-    }
-    // 
+ 
+    
+
+    
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         var view = mapView.dequeueReusableAnnotationViewWithIdentifier(Constants.AnnotationViewReuseIdentifier)
         
@@ -177,6 +209,30 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         }
     }
     
+    
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        print("\(alreadyUpdatedLocation)")
+        if(self.alreadyUpdatedLocation) {
+            return
+        }
+        
+        stopUpdatingLocation()
+        print("didUpdate")
+        
+        self.mapView.setRegion(MKCoordinateRegionMake(userLocation.coordinate, MKCoordinateSpanMake(0.1 , 0.1)), animated: true )
+        mapView.userTrackingMode = .None
+        //manager.stopUpdatingLocation()
+    }
+    
+    func mapView(mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+        //if you want to stop tracking the user
+        mapView.userTrackingMode = .None
+        manager.stopUpdatingLocation()
+        
+    }
+    
+    
+    
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -218,6 +274,39 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         return navcon
     }
 
+    
+    
+    
+    // MARK: - PFQuery stuff
+    //User's location - get the users current location from mapView Delegate
+    //    let latitude = coordinate.latitude as Double
+    //    let longitude = coordinate.longitude as Double
+    //    let point = PFGeoPoint(latitude:latitude, longitude:longitude)
+    //
+    //    already have it as a class var point
+    
+  
+    // User's location
+    //let userGeoPoint = placeObject["location"] as PFGeoPoint
+    // Create a query for places
+    
+    // Create a query for places
+    //var query = PFQuery(className:"PlaceObject")
+    
+    
+    // Interested in locations near user.
+    //query.whereKey(point, nearGeoPoint:userGeoPoint)
+    
+    
+    // Limit what could be a lot of points.
+    //query.limit = 10
+    
+    
+    // Final list of objects
+    //placesObjects = query.findObjects()
+    
+    
+    
     // MARK: - View Controller Lifecycle
 
 
@@ -225,9 +314,12 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       //retrieve an existing MKUserLocation object from the userLocation mapView.userLocation.location
+        
+  
         
         
-
+        
         // sign up to hear about GPX files arriving
         // we never remove this observer, so we will never leave the heap
         // might make some sense to think about when to remove this observer
@@ -278,6 +370,22 @@ override func viewDidAppear(animated: Bool) {
        
     }
 }
+    
+    // MARK: Helper Functions
+    
+     private func stopUpdatingLocation() {
+        
+        //get off the main queue
+        dispatch_async(dispatch_get_main_queue()) {
+            
+            // the building stop updating location function call
+            self.manager.stopUpdatingLocation()
+            
+            self.alreadyUpdatedLocation = true
+            
+        }
+
+    }
     
     // MARK: - Constants
     
