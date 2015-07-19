@@ -14,6 +14,7 @@ class EditableWaypoint: GPX.Waypoint
     override var coordinate: CLLocationCoordinate2D {
         get { return super.coordinate }
         set {
+            // we get this thing called newValue here
             latitude = newValue.latitude
             longitude = newValue.longitude
             print("latitude is now \(latitude)")

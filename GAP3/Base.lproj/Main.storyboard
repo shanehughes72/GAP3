@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KgD-QR-ThT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KgD-QR-ThT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
@@ -366,10 +366,10 @@
             </objects>
             <point key="canvasLocation" x="-4395" y="-1812"/>
         </scene>
-        <!--AuthViewController-->
+        <!--View Controller-->
         <scene sceneID="FKP-h6-2fd">
             <objects>
-                <viewController title="AuthViewController" id="KPS-hV-eFu" customClass="AuthViewController" customModule="GAP3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KPS-hV-eFu" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Kl-98-1jt"/>
                         <viewControllerLayoutGuide type="bottom" id="F4m-gr-0HS"/>
@@ -424,7 +424,7 @@
                                 <rect key="frame" x="267" y="65" width="102" height="100"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Quote" translatesAutoresizingMaskIntoConstraints="NO" id="m6m-Kk-5uC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" misplaced="YES" image="Quote" translatesAutoresizingMaskIntoConstraints="NO" id="m6m-Kk-5uC">
                                 <rect key="frame" x="46" y="199" width="100" height="106"/>
                                 <animations/>
                             </imageView>
@@ -454,7 +454,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xB-p4-tTY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xB-p4-tTY">
                                 <rect key="frame" x="73" y="307" width="132" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -600,7 +600,7 @@
             </objects>
             <point key="canvasLocation" x="-3660" y="-1804"/>
         </scene>
-        <!--View Controller-->
+        <!--map-->
         <scene sceneID="snw-Eu-gK5">
             <objects>
                 <viewController id="kfX-5k-qp6" customClass="GPXViewController" customModule="GAP3" customModuleProvider="target" sceneMemberID="viewController">
@@ -612,8 +612,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Q81-ar-Fic">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Q81-ar-Fic">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <animations/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -630,7 +630,14 @@
                             <constraint firstAttribute="trailing" secondItem="Q81-ar-Fic" secondAttribute="trailing" id="ddQ-d8-Woh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="v9M-Da-pQb"/>
+                    <navigationItem key="navigationItem" title="map" id="izz-Fo-ccY">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="y6D-Q2-5u1">
+                            <connections>
+                                <action selector="Seach:" destination="kfX-5k-qp6" id="I4T-ZC-LjT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="GiP-k8-h3i"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="Q81-ar-Fic" id="jXv-qK-LcF"/>
                         <segue destination="oeC-SN-4ZT" kind="show" identifier="Show Image" id="pfn-BJ-NSQ">
@@ -662,13 +669,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="10t-VV-HPD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="10t-VV-HPD">
                                 <rect key="frame" x="72" y="28" width="512" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE0-zJ-NOI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE0-zJ-NOI">
                                 <rect key="frame" x="16" y="31" width="46" height="21"/>
                                 <animations/>
                                 <constraints>
@@ -678,14 +685,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Info" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBh-uz-3oV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBh-uz-3oV">
                                 <rect key="frame" x="16" y="71" width="46" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvR-W0-OBd">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvR-W0-OBd">
                                 <rect key="frame" x="72" y="68" width="512" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -812,6 +819,6 @@
         <image name="Text" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="76x-E0-FJx"/>
+        <segue reference="jzk-g9-Jf9"/>
     </inferredMetricsTieBreakers>
 </document>

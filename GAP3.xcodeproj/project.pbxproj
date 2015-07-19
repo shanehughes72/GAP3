@@ -196,8 +196,8 @@
 		029E52EA1B17D2160062A263 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				02867FE01B17E90F00085453 /* Frameworks */,
 				02687BB41B4347B800599E3A /* GPX.swift */,
+				02867FE01B17E90F00085453 /* Frameworks */,
 				02687BB51B4347B800599E3A /* ImageViewController.swift */,
 				029E52F51B17D2160062A263 /* LaunchScreen.xib */,
 				029E52F31B17D2160062A263 /* Images.xcassets */,

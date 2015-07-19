@@ -49,6 +49,7 @@ class TableViewController: PFQueryTableViewController {
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
 		
 		var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! PFTableViewCell!
+        // if cell is empty, make one else resuse
 		if cell == nil {
 			cell = PFTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
 		}
