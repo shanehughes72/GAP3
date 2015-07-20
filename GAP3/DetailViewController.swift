@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
 	
 	// Container to store the view table selected object
 	var currentObject : PFObject?
+    let ObjectId = PFUser.currentUser()!.objectId!
 	
     
 	// Some text fields
@@ -35,6 +36,13 @@ class DetailViewController: UIViewController {
 			updateObject["prayer"] = prayer.text
             
             
+            
+            let pointer = PFObject(withoutDataWithClassName:"_User", objectId: "\(ObjectId)")
+            //let geoPointer = PFObject(withoutDataWithClassName: <#T##String#>, objectId: <#T##String?#>)
+            //let placeObject = PFObject(className:"PrayerTable")
+            updateObject["user"] = pointer // shows up as Pointer <MyClassName> in the Data Browser
+            //placeObject.saveEventually()
+            
 			// Save the data back to the server in a background task
 			updateObject.saveEventually()
 			
@@ -48,6 +56,13 @@ class DetailViewController: UIViewController {
 			updateObject["prayerTitle"] = prayerTitle.text
             updateObject["prayer"] = prayer.text
 			updateObject.ACL = PFACL(user: PFUser.currentUser()!)
+            
+            
+            let pointer = PFObject(withoutDataWithClassName:"_User", objectId: "\(ObjectId)")
+            //let geoPointer = PFObject(withoutDataWithClassName: <#T##String#>, objectId: <#T##String?#>)
+            //let placeObject = PFObject(className:"PrayerTable")
+            updateObject["user"] = pointer // shows up as Pointer <MyClassName> in the Data Browser
+           
 			
 			// Save the data back to the server in a background task
 			updateObject.saveEventually()

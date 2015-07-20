@@ -20,6 +20,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     var alreadyUpdatedLocation = Bool()
     var point = PFGeoPoint()
     var user = PFUser()
+    var prayer = "Dropped from Parse"
     // MARK: - Outlets
 
     @IBOutlet weak var mapView: MKMapView! {
@@ -45,7 +46,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         // Create a query for places
         let query = PFQuery(className:"GeoPoints")
         // Interested in locations near user.
-        print(query.whereKey("location", nearGeoPoint:point))
+        query.whereKey("location", nearGeoPoint:point)
         // Limit what could be a lot of points.
         query.limit = 10
         // Final list of objects
@@ -71,14 +72,6 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
 //            print("user is \(user)")
 //            print("objId is \(objId)")
             
-//            let query = PFQuery(className:"User")
-//            query.whereKey("objectId", equalTo:objId!)
-//            query.limit = 10
-//            let placesUsers = query.findObjects()
-//            print("placesUsers is \(placesUsers)")
-            
-            
-            
             //print("point is \(point)")
             let waypoint = EditableWaypoint(latitude: point.latitude, longitude: point.longitude)
             
@@ -91,14 +84,30 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
             
             print("objId is \(objId)")
             
+            let query = PFQuery(className:"PrayerTable")
+            query.whereKey("user", equalTo: PFObject(withoutDataWithClassName:"_User", objectId:objId))
+            // Limit what could be a lot of points.
+            query.limit = 10
+            // Final list of objects
+            let placesObjects = query.findObjects()!
             
-            let query3 = PFQuery.getUserObjectWithId(objId)
+            print(placesObjects)
             
-           print(query3?.username)
+            for x in placesObjects {
+                
+                 prayer = x["prayer"] as! String
+                
+                print(prayer)
+                
+            }
+            
+            //## how to query user db ###
+            //let query3 = PFQuery.getUserObjectWithId(objId)
+            //print(query3?.username)
             
             
-            //query.whereKey(key: String, containedIn:)
-            waypoint.name = "Dropped from Parse"
+           
+            waypoint.name = prayer
             mapView.addAnnotation(waypoint)
             //let annotation = MKPointAnnotation()
             //annotation.coordinate = CLLocationCoordinate2DMake(point.latitude, point.longitude)
